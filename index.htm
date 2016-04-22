@@ -1,0 +1,21 @@
+<html>
+  <head>
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  </head>
+<body>
+  <button data-action="blink">Blink</div>
+
+</body>
+  <script>
+  $(document).ready(function(){
+    $('button').on('click',function(){
+      var _action = '?action='+$(this).data('action');
+      url='centralperk:8081/process_get';
+      $.ajax({
+        url: url+_action
+      });
+
+    })
+  })
+  </script>
+</html>
